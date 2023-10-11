@@ -1,0 +1,37 @@
+.single_todo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.text {
+    text-transform: capitalize;
+    font-size: 1.3rem;
+}
+
+.undone {
+    background-color: red;
+}
+
+.done {
+    background-color: green;
+}
+
+
+.list_box {
+    display: flex;
+    flex-basis: 70%;
+}
+
+.button {
+    display: flex;
+    justify-content: space-evenly;
+    flex-basis: 20%;
+}
+
+.icon svg {
+    width: 25px;
+    height: 25px;
+}
