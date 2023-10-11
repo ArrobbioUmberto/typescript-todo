@@ -16,7 +16,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <header>
-        <h1 className='title'>taskyfy</h1>
+        <h1 className='title'>daily duty hub</h1>
         <Input todo={todo} setTodo={setTodo} addItem={addItem} />
         <TodoList list={list} setList={setList} />
       </header>
