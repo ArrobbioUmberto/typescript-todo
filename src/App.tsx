@@ -17,9 +17,12 @@ const App: React.FC = () => {
     <div className="App">
       <header>
         <h1 className='title'>daily duty hub</h1>
+      </header>
+      <main>
         <Input todo={todo} setTodo={setTodo} addItem={addItem} />
         <TodoList list={list} setList={setList} />
-      </header>
+
+      </main>
     </div>
   );
 }

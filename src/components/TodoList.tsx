@@ -24,7 +24,6 @@ export default TodoList;
 const loadTodoListFromLocalStorage = () => {
     try {
         const todoListString = localStorage.getItem('todoList');
-        console.log(todoListString, 'qua')
         if (todoListString) {
             return JSON.parse(todoListString) as Todo[];
         }

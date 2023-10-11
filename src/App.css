@@ -10,6 +10,10 @@
     background-color: cornflowerblue;
 }
 
+main {
+    width: 80vw;
+}
+
 .title {
     text-transform: capitalize;
     font-size: 2rem;

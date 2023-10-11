@@ -4,3 +4,9 @@
     row-gap: 10px;
     margin-top: 20px;
 }
+
+@media(max-width:374px) {
+    .list {
+        margin-top: 80px;
+    }
+}
