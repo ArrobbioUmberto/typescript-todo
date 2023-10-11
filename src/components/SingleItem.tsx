@@ -8,12 +8,12 @@ interface Props {
     list: Todo[],
     setList: React.Dispatch<React.SetStateAction<Todo[]>>
 }
+
 const SingleItem: React.FC<Props> = ({ todo, list, setList }) => {
 
     const [edit, setEdit] = useState<boolean>(false)
     const [editTodo, setEditTodo] = useState<string>(todo.todo)
     const Done = (id: number) => {
-        console.log('add', todo.id)
         setList(list.map((todo) => todo.id === id ? { ...todo, isDone: !todo.isDone } : todo))
     }
     const Delete = (id: number) => {
@@ -27,8 +27,10 @@ const SingleItem: React.FC<Props> = ({ todo, list, setList }) => {
     }
 
     const inputRef = useRef<HTMLInputElement>(null)
-
     useEffect(() => { inputRef.current?.focus() }, [edit])
+    useEffect(() => {
+        localStorage.setItem('todoList', JSON.stringify(list));
+    }, [list]);
     return (
         <form className={`${classes.single_todo} ${todo.isDone ? classes.done : classes.undone}`} onSubmit={(e) => Edit(e, todo.id)}>
             {edit ? (<div className={classes.list_box}><input ref={inputRef} value={editTodo} onChange={(e) => setEditTodo(e.target.value)} /></div>) :
